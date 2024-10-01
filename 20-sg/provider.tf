@@ -7,7 +7,7 @@ terraform {
   }
     backend "s3" {
       bucket = "remote-state-bucket-aws"
-      key = "terraform-expense-infra-dev-sg"
+      key = "terraform-expense-infra-dev-sg-1"
       region = "us-east-1"
       dynamodb_table = "remote-state-table"
     }

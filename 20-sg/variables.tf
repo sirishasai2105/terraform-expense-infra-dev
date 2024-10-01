@@ -22,6 +22,11 @@ variable "bastion_sg_tags" {
     default = "bastion_sg"
 }
 
+variable "ansible_sg_tags" {
+    default = "ansible_sg"
+}
+
+
 
 
 
