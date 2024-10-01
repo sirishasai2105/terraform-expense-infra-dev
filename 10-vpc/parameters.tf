@@ -10,5 +10,22 @@ resource "aws_ssm_parameter" "public_subnet_ids" {
   value = join(",", module.vpc.subnet_ids)
 }
 
+resource "aws_ssm_parameter" "private_subnet_ids" {
+  name  = "/expense/dev/private_subnet_ids"
+  type  = "StringList"
+  value = join(",", module.vpc.backend_subnet_id)
+}
+
+resource "aws_ssm_parameter" "database_subnet_ids" {
+  name  = "/expense/dev/database_subnet_ids"
+  type  = "StringList"
+  value = join(",", module.vpc.database_subnet_id)
+}
+
+
+
+
+
+
 
 
